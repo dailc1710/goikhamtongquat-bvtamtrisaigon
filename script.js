@@ -65,6 +65,18 @@ if (contactForm) {
       return;
     }
 
+    // Honeypot: real users never see/fill this field. If filled -> bot -> drop.
+    const honeypot = contactForm.elements.company;
+    if (honeypot && honeypot.value.trim() !== "") {
+      if (status) {
+        status.hidden = false;
+        status.textContent =
+          "Cảm ơn bạn! Chúng tôi đã nhận thông tin và sẽ liên hệ trong thời gian sớm nhất.";
+      }
+      contactForm.reset();
+      return;
+    }
+
     const name = contactForm.elements.name.value.trim();
     const data = new FormData();
     data.append(FIELD.name, name);

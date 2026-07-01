@@ -1430,6 +1430,20 @@ svg circle {
 
 .field-with-icon input[type="datetime-local"] {
   cursor: pointer;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+/* Honeypot anti-spam field (hidden from real users) */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Stretch the native picker button across the field so a click anywhere
