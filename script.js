@@ -58,6 +58,50 @@ if (contactForm) {
     note: "entry.1428776423",
   };
 
+  // Show a transient red warning under a field
+  const fieldWarning = (input, message) => {
+    const label = input.closest("label");
+    if (!label) return;
+    let hint = label.querySelector(".field-hint");
+    if (!hint) {
+      hint = document.createElement("span");
+      hint.className = "field-hint";
+      label.appendChild(hint);
+    }
+    hint.textContent = message;
+    hint.classList.add("is-show");
+    window.clearTimeout(hint._timer);
+    hint._timer = window.setTimeout(() => hint.classList.remove("is-show"), 2500);
+  };
+
+  // Phone field: digits + phone symbols only, max 15 chars
+  const phoneInput = contactForm.elements.phone;
+  if (phoneInput) {
+    phoneInput.addEventListener("input", () => {
+      if (/[^\d\s().+-]/.test(phoneInput.value)) {
+        fieldWarning(phoneInput, "Số điện thoại chỉ được nhập số.");
+      }
+      const cleaned = phoneInput.value.replace(/[^\d\s().+-]/g, "").slice(0, 15);
+      if (cleaned !== phoneInput.value) {
+        phoneInput.value = cleaned;
+      }
+    });
+  }
+
+  // Name field: no digits, max 50 chars
+  const nameInput = contactForm.elements.name;
+  if (nameInput) {
+    nameInput.addEventListener("input", () => {
+      if (/[0-9]/.test(nameInput.value)) {
+        fieldWarning(nameInput, "Họ và tên không được chứa số.");
+      }
+      const cleaned = nameInput.value.replace(/[0-9]/g, "").slice(0, 50);
+      if (cleaned !== nameInput.value) {
+        nameInput.value = cleaned;
+      }
+    });
+  }
+
   // Datetime is gray by default (CSS); darken only once a value is chosen
   const timeInput = contactForm.elements.time;
   if (timeInput) {

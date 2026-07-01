@@ -1437,6 +1437,31 @@ svg circle {
   opacity: 1;
 }
 
+.field-hint {
+  display: none;
+  margin-top: 2px;
+  color: var(--red-500);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.field-hint.is-show {
+  display: block;
+  animation: field-hint-in 0.2s ease;
+}
+
+@keyframes field-hint-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Datetime placeholder is GRAY by default (pure CSS, works without JS) */
 .field-with-icon input[type="datetime-local"],
 .field-with-icon input[type="datetime-local"]::-webkit-datetime-edit,

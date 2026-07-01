@@ -13,7 +13,7 @@
       name="description"
       content="Landing page giới thiệu gói tầm soát sức khỏe toàn diện của Bệnh viện Đa khoa Tâm Trí Sài Gòn."
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=9" />
   </head>
   <body id="top">
     <header class="site-header">
@@ -731,11 +731,11 @@
             <form class="contact-form">
               <label>
                 <span>Họ và Tên *</span>
-                <input type="text" name="name" placeholder="Nguyễn Văn A" required />
+                <input type="text" name="name" placeholder="Nguyễn Văn A" required maxlength="50" />
               </label>
               <label>
                 <span>Số Điện Thoại *</span>
-                <input type="tel" name="phone" placeholder="09xx xxx xxx" required pattern="[0-9\s().+-]{8,}" />
+                <input type="tel" name="phone" placeholder="09xx xxx xxx" required inputmode="numeric" pattern="[0-9\s().+-]{8,}" maxlength="15" />
               </label>
               <label>
                 <span>Thời Gian Mong Muốn</span>
@@ -877,6 +877,6 @@
       </a>
     </div>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=9"></script>
   </body>
 </html>
