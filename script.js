@@ -58,6 +58,16 @@ if (contactForm) {
     note: "entry.1428776423",
   };
 
+  // Datetime is gray by default (CSS); darken only once a value is chosen
+  const timeInput = contactForm.elements.time;
+  if (timeInput) {
+    const syncTimeFilled = () =>
+      timeInput.classList.toggle("has-value", !!timeInput.value);
+    syncTimeFilled();
+    timeInput.addEventListener("input", syncTimeFilled);
+    timeInput.addEventListener("change", syncTimeFilled);
+  }
+
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 

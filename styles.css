@@ -1402,6 +1402,9 @@ svg circle {
   background: #f9fcff;
   padding: 14px 16px;
   color: var(--text);
+  font-family: "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .contact-form textarea {
@@ -1428,10 +1431,43 @@ svg circle {
   pointer-events: none;
 }
 
-.field-with-icon input[type="datetime-local"] {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8a97a3;
+  opacity: 1;
+}
+
+/* Datetime placeholder is GRAY by default (pure CSS, works without JS) */
+.field-with-icon input[type="datetime-local"],
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-fields-wrapper,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-text,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-month-field,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-day-field,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-year-field,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-hour-field,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-minute-field,
+.field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
   cursor: pointer;
-  font-family: inherit;
+  font-family: "Be Vietnam Pro", Inter, system-ui, sans-serif;
   font-weight: 400;
+  color: #8a97a3;
+  -webkit-text-fill-color: #8a97a3;
+}
+
+/* Once a date is chosen, JS adds .has-value -> darken to normal text color */
+.field-with-icon input[type="datetime-local"].has-value,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-fields-wrapper,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-text,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-month-field,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-day-field,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-year-field,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-hour-field,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-minute-field,
+.field-with-icon input[type="datetime-local"].has-value::-webkit-datetime-edit-ampm-field {
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
 }
 
 /* Honeypot anti-spam field (hidden from real users) */
