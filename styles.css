@@ -988,11 +988,12 @@ svg circle {
 
 .package-body li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   color: rgba(2, 19, 34, 0.9);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
+  white-space: nowrap;
 }
 
 .package-body li .check-icon {
