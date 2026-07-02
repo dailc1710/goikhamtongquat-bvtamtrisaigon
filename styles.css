@@ -972,6 +972,16 @@ svg circle {
   box-shadow: 0 8px 30px -6px rgba(0, 118, 204, 0.4);
 }
 
+.badge-vip {
+  color: #ffffff;
+  background: linear-gradient(167deg, #ffc72c 0%, #f5a300 100%);
+  box-shadow: 0 6px 20px -8px rgba(214, 150, 0, 0.55);
+}
+
+.badge-vip .badge-icon {
+  filter: brightness(0) invert(1);
+}
+
 .package-body {
   display: grid;
   gap: 18px;
