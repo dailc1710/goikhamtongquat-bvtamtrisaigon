@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
 
 :root {
   --blue-900: #021322;
@@ -40,7 +40,7 @@ body {
   margin: 0;
   color: var(--text);
   background: #ffffff;
-  font-family: "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   line-height: 1.6;
 }
 
@@ -144,7 +144,7 @@ svg circle {
 
 .brand-copy strong {
   color: var(--blue-600);
-  font-family: "Plus Jakarta Sans", "Be Vietnam Pro", sans-serif;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
   font-size: 15px;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -307,7 +307,7 @@ svg circle {
 .contact-form-card h2,
 .cta-content h2 {
   margin: 0;
-  font-family: "Plus Jakarta Sans", "Be Vietnam Pro", sans-serif;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
   font-weight: 800;
   color: var(--text);
   letter-spacing: -0.04em;
@@ -825,7 +825,7 @@ svg circle {
 .feature-card h3,
 .insurance-intro h3 {
   margin: 0;
-  font-family: "Plus Jakarta Sans", "Be Vietnam Pro", sans-serif;
+  font-family: "Plus Jakarta Sans", "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.45;
 }
@@ -1413,7 +1413,7 @@ svg circle {
   background: #f9fcff;
   padding: 14px 16px;
   color: var(--text);
-  font-family: "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -1485,7 +1485,7 @@ svg circle {
 .field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-minute-field,
 .field-with-icon input[type="datetime-local"]::-webkit-datetime-edit-ampm-field {
   cursor: pointer;
-  font-family: "Be Vietnam Pro", Inter, system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-weight: 400;
   color: #8a97a3;
   -webkit-text-fill-color: #8a97a3;
@@ -2188,10 +2188,10 @@ svg circle {
   }
 
   .doctor-image {
-    left: 50%;
-    right: auto;
-    width: 72%;
-    transform: translateX(-50%);
+    left: auto;
+    right: 4%;
+    width: 60%;
+    transform: none;
   }
 
   .doctor-meta {
